@@ -1,0 +1,337 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--while-color);
+}
+.content {
+  height: 100vh;
+  background-color: var(--while-color);
+}
+
+.slider {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+.slider_item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.slick-arrow {
+  display: none !important;
+}
+.slider_item img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.slider__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.info h2 {
+  color: var(--while-color);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.info p {
+  color: var(--while-color);
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+.menu_bar {
+  background-color: rgba(176, 43, 43, 0.466);
+  text-align: center;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.logo-img {
+  width: 120px;
+  height: 100%;
+}
+.menu_bar ul {
+  display: inline-flex;
+  list-style: none;
+  color: white;
+  margin: 0;
+}
+.menu_bar ul li {
+  margin: 15px;
+  padding: 10px;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.menu_bar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+.active,
+.menu_bar ul li:hover {
+  background: #b02b2c;
+  border-radius: 3px;
+}
+.menu_bar ul li:nth-child(2):hover {
+  border-bottom-left-radius: none;
+  border-bottom-right-radius: none;
+}
+.sub_menu-1 {
+  display: none;
+  animation: opacityanimation 0.5s linear;
+}
+.menu_bar ul li:hover .sub_menu-1 {
+  display: block;
+  position: absolute;
+  background-color: #b02b2c;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+.menu_bar ul li:hover .sub_menu-1 ul {
+  display: block;
+  margin: 10px;
+  animation: opacityanimation 0.5s linear;
+  transition-delay: 0.25s;
+}
+.menu_bar ul li:hover .sub_menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background: transparent;
+  text-align: left;
+  border-radius: 0;
+}
+.menu_bar ul li:hover .sub_menu-1 ul li:last-child {
+  border-bottom: none;
+}
+.menu_bar ul li:hover .sub_menu-1 ul li a {
+  text-transform: none;
+}
+.menu_bar ul li:hover .sub_menu-1 ul li a:hover {
+  color: #b2ff00;
+}
+@keyframes opacityanimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.intro {
+  text-align: center;
+  background-color: var(--while-color);
+}
+.intro_item {
+  padding: 30px 70px;
+}
+.intro_item h1,
+.intro_item h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.intro_item p {
+  line-height: 1.8;
+}
+.intro_item a {
+  font-weight: bold;
+  color: var(--black-color);
+}
+
+.selection {
+  padding: 50px 200px;
+  background-color: #b02b2c;
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--while-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.select_list {
+  padding-top: 30px;
+  display: grid;
+  grid-gap: 56px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  position: relative;
+}
+.select_item {
+  height: 300px;
+  background-color: var(--while-color);
+  overflow: hidden;
+}
+.item_link {
+  background-color: transparent;
+  z-index: 10;
+}
+.item_img {
+  width: 100%;
+  height: 85%;
+  overflow: hidden;
+}
+.item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.7s linear;
+  opacity: 0.7;
+}
+.item__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--black-color);
+  line-height: 15px;
+  margin: 0;
+  padding-left: 20px;
+}
+.select_item:hover .item_img img {
+  opacity: 1;
+  transform: scale(1.1) translateZ(0);
+  cursor: pointer;
+}
+
+.advantages {
+  padding: 50px 200px;
+  display: grid;
+  grid-gap: 56px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  text-align: center;
+  background-color: var(--while-color);
+}
+.advantage__item {
+  padding: 20px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  position: relative;
+}
+.icon__item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #b02b2c;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon__item i {
+  padding: 12px;
+  color: var(--while-color);
+}
+.advantage__title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* Contact */
+.contact {
+  width: 100%;
+  padding: 50px 200px;
+  background-color: #cf1b15;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.address {
+  max-width: 360px;
+}
+.address h3,
+.address h4,
+.pages h4,
+.pages h3 {
+  text-transform: uppercase;
+  color: var(--while-color);
+}
+.address p {
+  color: var(--while-color);
+  margin: 15px 0;
+}
+.pages a {
+  display: block;
+  margin: 15px 0;
+  color: var(--while-color);
+  text-decoration: none;
+}
+
+/* footer */
+.footer {
+  padding: 0 200px;
+  width: 100%;
+  background-color: #b02b2c;
+  display: flex;
+  justify-content: space-evenly;
+}
+.copyright,
+.brand {
+  padding: 15px;
+  color: var(--while-color);
+}
+.brand a,
+.copyright a {
+  color: var(--while-color);
+  text-decoration: none;
+}
+.copyright a:hover {
+  text-decoration: underline;
+}
+.brand a i {
+  padding: 0 10px;
+  font-size: 18px;
+}
+.brand a:hover {
+  opacity: 0.8;
+}
+.feedback {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
+  padding: 40px 0;
+}
+.feedback div {
+  min-width: 360px;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+.btn-cmt {
+  padding: 6px 8px;
+  cursor: pointer;
+}

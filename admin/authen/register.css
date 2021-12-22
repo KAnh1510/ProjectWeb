@@ -1,0 +1,19 @@
+body {
+  height: 90vh;
+  background: linear-gradient(
+      100deg,
+      rgba(0, 128, 0, 0.315),
+      rgba(0, 0, 255, 0.322)
+    ),
+    url("../../asset/image/background-regeister.jpg") no-repeat center
+      center/cover;
+}
+
+.panel {
+  width: 480px;
+  margin: 0px auto;
+  margin-top: 80px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  padding: 10px;
+}
