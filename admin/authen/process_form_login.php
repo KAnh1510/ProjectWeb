@@ -5,7 +5,7 @@ $fullname = $email = $msg = $role_id = '';
 if(!empty($_POST)) {
 	$email = getPost('email');
 	$pwd = getPost('password');
-
+	
 	$sql = "select * from user where email = '$email' and password = '$pwd'";
 	$userExist = executeResult ($sql,true);
 		
